@@ -9,6 +9,7 @@ projectContent.forEach(function (item) {
    item.addEventListener('mouseover', function (obj) {
       if(video !== null) video.classList.add('hidden')
       video = document.querySelector('#' + obj.target.attributes['data-project'].value);
+      video.currentTime = 0;
       video.classList.remove('hidden')
       let el = null;
       for(el in hidableElemetns) hidableElemetns.item(el).setAttribute('data-hidable', 'true');
@@ -22,6 +23,21 @@ projectContent.forEach(function (item) {
       for(var el in elementsToHide) elementsToHide.item(el).classList.remove('opacity');
       video.classList.add('hidden')
    })
-   
+
 })
 
+
+document.addEventListener("DOMContentLoaded", function() {
+
+   //let item = document.querySelector("[data-project='project-content-1']");
+   inView.offset({
+      bottom: 200
+   });
+   inView("[data-project]").on('enter', function (obj) {
+      console.log(obj.attributes['data-project'].value)
+      video = document.querySelector('#' + obj.attributes['data-project'].value);
+      video.currentTime = 0;
+      video.classList.remove('hidden')
+   });
+
+});

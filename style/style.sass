@@ -1,11 +1,11 @@
-@font-face 
+@font-face
   font-family: 'Decima Mono X'
   src: url("../font/DecimaMonoX-Bold.eot")
   src: url("../font/DecimaMonoX-Bold.woff2"), url("../font/DecimaMonoX-Bold.woff")
   font-weight: bold
   font-style: normal
 
-@font-face 
+@font-face
   font-family: 'Decima Mono X'
   src: url("../font/DecimaMonoProRegular.otf")
   src: url("../font/DecimaMonoProRegular.woff2"), url("../font/DecimaMonoProRegular.woff")
@@ -17,9 +17,9 @@
   margin: 0
   padding: 0
   border: 0
-  
 
-body 
+
+body
   background-color: #fdfbf6
   height: 100%
   min-height: 100%
@@ -57,26 +57,26 @@ body
   margin-right: 45px
   text-transform: uppercase
 
-header 
+header
   margin-top: 25px
   padding: 20px 0
   height: 60px
   display: flex
   align-items: center
-  
-main 
+
+main
   margin-bottom: 200px
 
-.logo 
+.logo
   width: 130px
 
-.nav 
+.nav
   margin-left: 130px
 
 .intro
   position: relative
   animation: swipe-up 1s 0.01s ease
-  .intro__text 
+  .intro__text
     margin-top: 50px
     font-size: 24px
     font-weight: bold
@@ -88,18 +88,18 @@ main
 
 
 ul
-   display: flex
-   align-items: center
-   gap: 60px
-   li
-    list-style-type: none
+  display: flex
+  align-items: center
+  gap: 60px
+  li
+  list-style-type: none
+  padding: 10px
+  transition: transform 0.5s
+  &:hover
+    opacity: 1
+    transform: scale(1.1) translateY(-2px)
+  a
     padding: 10px
-    transition: transform 0.5s
-    &:hover
-      opacity: 1
-      transform: scale(1.1) translateY(-2px)
-    a
-      padding: 10px
 
 
 .project__selected
@@ -113,7 +113,7 @@ ul
   color: #fdfbf6
   animation: swipe-up 0.5s 0.5s forwards
 
-.line 
+.line
   position: relative
   top: 0
   height: 1px
@@ -124,7 +124,7 @@ ul
 
 .project__list
   width: 100%
-  margin-top: 50px 
+  margin-top: 50px
   margin-left: -20px
   display: flex
   flex-wrap: wrap
@@ -167,7 +167,7 @@ ul
     .project__item
       // pointer-events: none
       width: 100%
-      .project__item__number 
+      .project__item__number
         margin-bottom: 20px
 
 .invert
@@ -182,38 +182,38 @@ a
 
 
 
-@keyframes appearance 
+@keyframes appearance
   from
     color: #fdfbf6
-  to 
+  to
     transform: translateY(0)
     color: #000
-  
+
 @keyframes swipe-up
-  0%  
+  0%
     transform: translateY(40px)
     color: #fdfbf6
-  100% 
+  100%
     transform: translateY(0)
     color: #000
 
 
-@keyframes line-anim 
-  0% 
-    // opacity: 0.5 
+@keyframes line-anim
+  0%
+    // opacity: 0.5
     width: 0%
-  100% 
-    // opacity: 1 
+  100%
+    // opacity: 1
     width: 100%
-  
 
-.inverted-bar 
+
+.inverted-bar
   position: relative
 
 
 .inverted-bar
   &::before,
-  &::after 
+  &::after
     padding: 10px 0
     text-indent: 10px
     position: absolute
@@ -226,14 +226,14 @@ a
     color: #fff
     width: 20%
 
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
 @media (max-width: 1400px)
   .project__list
     gap: 0
@@ -260,19 +260,22 @@ a
         display: none
       .nav__item
         padding: 10px
-    
+
 
 .project__item__title
-  display: -webkit-box 
-  -webkit-line-clamp: 3 
-  -webkit-box-orient: vertical 
-  overflow: hidden 
+  display: -webkit-box
+  -webkit-line-clamp: 3
+  -webkit-box-orient: vertical
+  overflow: hidden
 
-@media (max-width: 500px)
+@media (max-width: 640px)
 
   .project__list
     font-size: 1.2em
     .project__item-link
+      border: #000 1px solid
+      display: flex
+      align-items: center
       width: 90%
       height: 150px
       .project__item
@@ -283,15 +286,12 @@ a
   header
     padding: 20px 0 0 0
     justify-content: space-between
+    padding: 20px 0 0 0
+    margin-top: 0
     .nav
       gap: 5px
       margin-left: 5px
 
-@media (max-width: 500px)
-  header
-    padding: 20px 0 0 0
-    margin-top: 0
-    
   .intro
     .intro__text
       margin-top: 70px
@@ -301,14 +301,14 @@ a
     font-size: 16px
     font-weight: bold
     margin-top: 60px
-  .project__list 
+  .project__list
     margin-top: 25px
     font-weight: 400
     font-size: 1em
     line-height: 18px
     letter-spacing: 0.05em
     .project__item-link
-      height: 100%
+      height: 40vh
       padding: 20px
 
 
@@ -317,7 +317,7 @@ a
 .project__selected
   color: #fdfbf6
 
-.project__selected .element-show 
+.project__selected .element-show
   color: #000
   transition: all 1.5s
   transform: translateY(0%)
@@ -325,48 +325,11 @@ a
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .project__item-link
   &:hover
     background-color: #fdfbf6
+    @media (max-width: 640px)
+      background-color: transparent
 //     .a-cont
 //       position: absolute
 //       background-color: #000
@@ -412,33 +375,33 @@ a
 // @keyframes animate-a
 //   0%
 //     width: 0%
-  
+
 //   100%
 //     width: 100%
-  
+
 
 // @keyframes animate-b
 //   0%
 //     height: 0%
-  
+
 //   100%
 //     height: 100%
-  
+
 
 // @keyframes animate-c
 //   0%
 //     width: 0%
-  
+
 //   100%
 //     width: 100%
-  
+
 
 // @keyframes animate-d
 //   0%
 //     height: 0%
-  
+
 //   100%
 //     height: 100%
-  
+
 
 
